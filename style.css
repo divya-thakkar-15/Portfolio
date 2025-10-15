@@ -1,103 +1,144 @@
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: 'Poppins', sans-serif;
+  font-family: "Poppins", sans-serif;
 }
+
 body {
-  background-color: #0d1c1f;
+  background-color: #081b1f;
   color: #fff;
+  transition: background-color 0.4s, color 0.4s;
   overflow-x: hidden;
 }
-.navbar {
+
+.header {
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
   display: flex;
   justify-content: space-between;
-  align-items: center;
-  padding: 20px 60px;
+  align-items: flex-start;
+  padding: 20px 8%;
+  z-index: 1000;
 }
+
 .logo {
+  font-size: 1.8rem;
   font-weight: 600;
-  letter-spacing: 1px;
+  color: #00e6b8;
 }
-.hero {
+
+
+.header-icons {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 15px;
+}
+
+.icon-btn {
+  background: transparent;
+  border: none;
+  color: #00e6b8;
+  font-size: 1.4rem;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+.icon-btn:hover {
+  transform: scale(1.2);
+}
+
+.tooltip {
+  position: relative;
+}
+
+.tooltip .tooltip-text {
+  visibility: hidden;
+  width: 100px;
+  background-color: #00e6b8;
+  color: #081b1f;
+  text-align: center;
+  border-radius: 6px;
+  padding: 5px;
+  position: absolute;
+  z-index: 1;
+  top: 0;
+  right: 110%;
+  opacity: 0;
+  transition: opacity 0.3s;
+  font-size: 0.8rem;
+}
+
+.tooltip:hover .tooltip-text {
+  visibility: visible;
+  opacity: 1;
+}
+
+
+.home {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 50px 80px;
+  padding: 150px 10%;
   flex-wrap: wrap;
 }
-.container {
-  flex: 1;
-  min-width: 300px;
+
+.content h1 {
+  font-size: 3rem;
+  margin-bottom: 10px;
 }
-.container .intro {
-  font-size: 18px;
-  color: #ccc;
+
+.content h1 span {
+  color: #00e6b8;
 }
-.container .intro span {
-  color: #00a884;
-  font-weight: 500;
-}
-.container h1 {
-  font-size: 60px;
-  font-weight: 700;
-  margin: 10px 0;
-}
-.container .name {
-  color: #00a884;
-}
-.container h3 {
+
+.content h3 {
   font-weight: 400;
-  color: #ccc;
   margin-bottom: 20px;
 }
-.container .desc {
-  max-width: 480px;
-  line-height: 1.6;
-  color: #aaa;
+
+.content p {
+  line-height: 1.7;
+  max-width: 550px;
 }
+
 .buttons {
-  display: flex;
-  gap: 15px;
-   margin: 25px 0
+  margin-top: 30px;
 }
+
 .btn {
-  text-decoration: none;
-  padding: 10px 25px;
+  background: transparent;
+  border: 2px solid #00e6b8;
+  color: #00e6b8;
+  padding: 10px 20px;
+  margin-right: 10px;
   border-radius: 25px;
-  font-weight: 500;
-  transition: 0.3s;
-}
-.btn.cv {
- border: 2px solid #00a884;
-  color: #00a884;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: all 0.3s ease;
 }
 
-.btn.skills {
-  border: 2px solid #00a884;
-  color: #00a884;
+.btn:hover {
+  background: #00e6b8;
+  color: #081b1f;
 }
 
-.btn.cv:hover {
- background-color: #00a884;
-  color: #fff;
-}
-
-.btn.skills:hover {
-  background-color: #00a884;
-  color: #fff;
-}
-.profile-img {
+.image-container {
   position: relative;
   flex: 1;
   display: flex;
   justify-content: center;
   align-items: center;
   min-width: 300px;
+  
 }
 
-.profile-img img {
-  width: 300px;
+.image-container img {
+  width: 400px;
   border-radius: 50%;
   background-color: #00a88433;
   padding: 10px;
@@ -117,45 +158,114 @@ body {
   font-size: 22px;
 }
 .experience {
-  bottom: 30px;
-  left: 50px;
+  bottom: 10px;
+  left: 220px;
 }
 
 .projects {
-  bottom: 30px;
-  right: 50px;
+  bottom: 10px;
+  right: 220px;
 }
+
+
+.side-menu {
+  position: fixed;
+  top: 0;
+  right: -260px;
+  height: 100vh;
+  width: 260px;
+  background-color: #092628;
+  transition: right 0.4s ease;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 999;
+}
+
+.side-menu ul {
+  list-style: none;
+  width: 100%;
+  padding: 0 30px;
+}
+
+.side-menu ul li {
+  margin: 25px 0;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 1.1rem;
+  transition: transform 0.3s ease;
+}
+
+.side-menu ul li i {
+  color: #00e6b8;
+  font-size: 1.2rem;
+}
+
+.side-menu ul li a {
+  color: #00e6b8;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.side-menu ul li:hover {
+  transform: translateX(8px);
+}
+
+
+.light-mode {
+  background-color: #f4f4f4;
+  color: #081b1f;
+}
+
+.light-mode .logo {
+  color: #081b1f;
+}
+
+.light-mode .icon-btn {
+  color: #081b1f;
+}
+
+.light-mode .btn {
+  border-color: #081b1f;
+  color: #081b1f;
+}
+
+.light-mode .btn:hover {
+  background-color: #081b1f;
+  color: #fff;
+}
+
+.light-mode .side-menu {
+  background-color: #fff;
+}
+
+.light-mode .side-menu ul li i {
+  color: #081b1f;
+}
+
+.light-mode .side-menu ul li a {
+  color: #081b1f;
+}
+
+
 @media (max-width: 900px) {
-  .hero {
-    flex-direction: column-reverse;
+  .home {
+    flex-direction: column;
     text-align: center;
   }
 
-  .profile-img {
-    margin-bottom: 40px;
+  .image-container img {
+    margin-top: 40px;
   }
 
-  .badge {
+  .experience,
+  .projects {
     position: static;
-    display: inline-block;
-    margin: 10px;
+    margin-top: 20px;
   }
 
-  .buttons {
-    justify-content: center;
-  }
-}
-
-@media (max-width: 600px) {
-  .container h1 {
-    font-size: 42px;
-  }
-
-  .container .desc {
-    max-width: 100%;
-  }
-
-  .navbar {
-    padding: 20px 25px;
+  .side-menu {
+    width: 200px;
   }
 }
