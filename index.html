@@ -2,36 +2,54 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Divya Thakkar</title>
-    <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Divya Thakkar | Portfolio</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" />
 </head>
 
 <body>
-    <header>
-        <div class="navbar">
-            <h2 class="logo">Divya</h2>
+
+    <header class="header">
+        <h2 class="logo">Divya</h2>
+
+        <div class="header-icons">
+            <div class="tooltip">
+                <button id="theme-toggle" class="icon-btn">
+                    <i class="fa-solid fa-moon"></i>
+                </button>
+                <span class="tooltip-text">Change Mode</span>
+            </div>
+
+            <div class="tooltip">
+                <button id="menu-btn" class="icon-btn">
+                    <i class="fa-solid fa-bars"></i>
+                </button>
+                <span class="tooltip-text">Menu</span>
+            </div>
         </div>
     </header>
-    <div class="hero">
-        <div class="container">
-            <p class="intro"> Hello <span>My name is, </span></p>
-            <h1><span class="name">Divya</span>Thakkar </h1>
-            <h3>web Devloper</h3>
-            <p class="desc">I’m Divya Thakkar — an aspiring Web Developer and Web Designer with a passion for creating
-                clean, user-friendly, and visually appealing websites.
-                I believe in combining technical skills with creative design to build solutions that not only look good
-                but also work seamlessly.</p>
-            <div class="links"></div>
+
+   
+    <section class="home">
+        <div class="content">
+            <h1>Divya<span> Thakkar</span></h1>
+            <h3>Web Developer</h3>
+            <p>
+                I’m Divya Thakkar — an aspiring Web Developer and Designer passionate
+                about creating responsive, and high-performance
+                websites. I love blending creativity with logic to craft user-friendly
+                digital experiences.
+            </p>
             <div class="buttons">
-                <a href="" class="btn cv">Download CV</a>
-                <a href="" class="btn skills">My skills</a>
+                <button class="btn">Download CV</button>
+                <button class="btn">My Skills</button>
             </div>
         </div>
 
-        <div class="profile-img">
-            <img src="" alt="profile image">
+        <div class="image-container">
+            <img src="https://img.freepik.com/free-vector/blue-circle-with-white-user_78370-4707.jpg?semt=ais_hybrid&w=740&q=80"     class="img"alt="Profile Image" />
             <div class="badge experience">
                 <h2>12+</h2>
                 <p>Years of<br>Experience</p>
@@ -40,9 +58,21 @@
                 <h2>330</h2>
                 <p>Completed<br>Projects</p>
             </div>
-
         </div>
+
+    </section>
+
+   
+    <div class="side-menu" id="side-menu">
+        <ul>
+            <li><i class="fa-solid fa-user"></i> <a href="#">About Me</a></li>
+            <li><i class="fa-solid fa-briefcase"></i> <a href="#">Projects</a></li>
+            <li><i class="fa-solid fa-code"></i> <a href="#">Skills</a></li>
+            <li><i class="fa-solid fa-envelope"></i> <a href="#">Contact</a></li>
+        </ul>
     </div>
+
+    <script src="script.js"></script>
 </body>
 
 </html>
