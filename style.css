@@ -1,0 +1,161 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+body {
+  background-color: #0d1c1f;
+  color: #fff;
+  overflow-x: hidden;
+}
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 60px;
+}
+.logo {
+  font-weight: 600;
+  letter-spacing: 1px;
+}
+.hero {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 50px 80px;
+  flex-wrap: wrap;
+}
+.container {
+  flex: 1;
+  min-width: 300px;
+}
+.container .intro {
+  font-size: 18px;
+  color: #ccc;
+}
+.container .intro span {
+  color: #00a884;
+  font-weight: 500;
+}
+.container h1 {
+  font-size: 60px;
+  font-weight: 700;
+  margin: 10px 0;
+}
+.container .name {
+  color: #00a884;
+}
+.container h3 {
+  font-weight: 400;
+  color: #ccc;
+  margin-bottom: 20px;
+}
+.container .desc {
+  max-width: 480px;
+  line-height: 1.6;
+  color: #aaa;
+}
+.buttons {
+  display: flex;
+  gap: 15px;
+   margin: 25px 0
+}
+.btn {
+  text-decoration: none;
+  padding: 10px 25px;
+  border-radius: 25px;
+  font-weight: 500;
+  transition: 0.3s;
+}
+.btn.cv {
+ border: 2px solid #00a884;
+  color: #00a884;
+}
+
+.btn.skills {
+  border: 2px solid #00a884;
+  color: #00a884;
+}
+
+.btn.cv:hover {
+ background-color: #00a884;
+  color: #fff;
+}
+
+.btn.skills:hover {
+  background-color: #00a884;
+  color: #fff;
+}
+.profile-img {
+  position: relative;
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-width: 300px;
+}
+
+.profile-img img {
+  width: 300px;
+  border-radius: 50%;
+  background-color: #00a88433;
+  padding: 10px;
+}
+.badge {
+  position: absolute;
+  background: #0f2b2f;
+  border-radius: 25px;
+  padding: 10px 20px;
+  text-align: center;
+  font-size: 14px;
+  color: #fff;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+.badge h2 {
+  color: #00a884;
+  font-size: 22px;
+}
+.experience {
+  bottom: 30px;
+  left: 50px;
+}
+
+.projects {
+  bottom: 30px;
+  right: 50px;
+}
+@media (max-width: 900px) {
+  .hero {
+    flex-direction: column-reverse;
+    text-align: center;
+  }
+
+  .profile-img {
+    margin-bottom: 40px;
+  }
+
+  .badge {
+    position: static;
+    display: inline-block;
+    margin: 10px;
+  }
+
+  .buttons {
+    justify-content: center;
+  }
+}
+
+@media (max-width: 600px) {
+  .container h1 {
+    font-size: 42px;
+  }
+
+  .container .desc {
+    max-width: 100%;
+  }
+
+  .navbar {
+    padding: 20px 25px;
+  }
+}
