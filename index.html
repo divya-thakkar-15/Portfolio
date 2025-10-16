@@ -2,77 +2,126 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Divya Thakkar | Portfolio</title>
-    <link rel="stylesheet" href="style.css" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Divya Thakkar Portfolio</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" />
+  <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+  <script>
+    (function () { emailjs.init("YOUR_USER_ID"); })();
+  </script>
+  <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-    <header class="header">
-        <h2 class="logo">Divya</h2>
+  <div class="header-icons">
+    <button id="menu-btn" class="icon-btn tooltip"><i class="fa-solid fa-bars"></i><span
+        class="tooltip-text">Menu</span></button>
+    <button id="theme-toggle" class="icon-btn tooltip"><i class="fa-solid fa-moon"></i><span class="tooltip-text">Switch mode </span></button>
+  </div>
 
-        <div class="header-icons">
-            <div class="tooltip">
-                <button id="theme-toggle" class="icon-btn">
-                    <i class="fa-solid fa-moon"></i>
-                </button>
-                <span class="tooltip-text">Change Mode</span>
-            </div>
+  <nav id="side-menu" class="side-menu">
+    <ul>
+      <li><i class="fa-solid fa-house"></i><a href="#home" class="menu-link">Home</a></li>
+      <li><i class="fa-solid fa-user"></i><a href="#about" class="menu-link">About</a></li>
+      <li><i class="fa-solid fa-laptop-code"></i><a href="#skills" class="menu-link">Skills</a></li>
+      <li><i class="fa-solid fa-folder-open"></i><a href="#projects" class="menu-link">Projects</a></li>
+      <li><i class="fa-solid fa-envelope"></i><a href="#contact" class="menu-link">Contact</a></li>
+    </ul>
+  </nav>
+  <div class="side-menu-overlay"></div>
 
-            <div class="tooltip">
-                <button id="menu-btn" class="icon-btn">
-                    <i class="fa-solid fa-bars"></i>
-                </button>
-                <span class="tooltip-text">Menu</span>
-            </div>
+  <section id="home" class="section active">
+    <div class="home">
+      <div class="content">
+        <h1>Hello, I'm <span>Divya Thakkar</span></h1>
+        <h3>Frontend Developer | UI/UX Enthusiast</h3>
+        <p>I create modern, responsive, and user-friendly web experiences.</p>
+        <div class="buttons">
+          <a href="DivyaThakkar_CV.pdf" class="btn" download>Download CV</a>
         </div>
-    </header>
-
-   
-    <section class="home">
-        <div class="content">
-            <h1>Divya<span> Thakkar</span></h1>
-            <h3>Web Developer</h3>
-            <p>
-                I’m Divya Thakkar — an aspiring Web Developer and Designer passionate
-                about creating responsive, and high-performance
-                websites. I love blending creativity with logic to craft user-friendly
-                digital experiences.
-            </p>
-            <div class="buttons">
-                <button class="btn">Download CV</button>
-                <button class="btn">My Skills</button>
-            </div>
+      </div>
+      <div class="image-container">
+        <img src="profile.jpg" alt="Divya Thakkar" />
+        <div class="badge experience">
+          <h2>3+</h2>
+          <p>Years Experience</p>
         </div>
-
-        <div class="image-container">
-            <img src="https://img.freepik.com/free-vector/blue-circle-with-white-user_78370-4707.jpg?semt=ais_hybrid&w=740&q=80"     class="img"alt="Profile Image" />
-            <div class="badge experience">
-                <h2>12+</h2>
-                <p>Years of<br>Experience</p>
-            </div>
-            <div class="badge projects">
-                <h2>330</h2>
-                <p>Completed<br>Projects</p>
-            </div>
+        <div class="badge projects">
+          <h2>15+</h2>
+          <p>Projects Done</p>
         </div>
-
-    </section>
-
-   
-    <div class="side-menu" id="side-menu">
-        <ul>
-            <li><i class="fa-solid fa-user"></i> <a href="#">About Me</a></li>
-            <li><i class="fa-solid fa-briefcase"></i> <a href="#">Projects</a></li>
-            <li><i class="fa-solid fa-code"></i> <a href="#">Skills</a></li>
-            <li><i class="fa-solid fa-envelope"></i> <a href="#">Contact</a></li>
-        </ul>
+      </div>
     </div>
+  </section>
 
-    <script src="script.js"></script>
+  <section id="about" class="section">
+    <div class="about-container">
+      <div class="about-image"><img src="profile.jpg" alt="Divya Thakkar"></div>
+      <div class="about-content">
+        <h2>About Me</h2>
+        <p>I'm a passionate Frontend Developer and UI/UX Designer who loves creating modern websites.</p>
+        <p>Skilled in HTML, CSS, JavaScript, React, and responsive design.</p>
+        <div class="social-links">
+          <a href="https://github.com/divya-thakkar-15" target="_blank"><i class="fa-brands fa-github"></i></a>
+          <a href="https://www.linkedin.com/in/divya-thakkar-9833b6292" target="_blank"><i
+              class="fa-brands fa-linkedin"></i></a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="skills" class="section">
+    <h2>Skills</h2>
+    <div class="skills-container">
+      <div class="skill">
+        <p>HTML</p>
+        <div class="skill-bar"><span style="width:95%"></span></div>
+      </div>
+      <div class="skill">
+        <p>CSS</p>
+        <div class="skill-bar"><span style="width:90%"></span></div>
+      </div>
+      <div class="skill">
+        <p>JavaScript</p>
+        <div class="skill-bar"><span style="width:85%"></span></div>
+      </div>
+      <div class="skill">
+        <p>React</p>
+        <div class="skill-bar"><span style="width:75%"></span></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="projects" class="section">
+    <h2>Projects</h2>
+    <div class="projects-container">
+      <div class="project-card">
+        <h3>Portfolio Website</h3>
+        <p>Built with HTML, CSS, JS.</p>
+      </div>
+      <div class="project-card">
+        <h3>Todo App</h3>
+        <p>Interactive todo app with localStorage.</p>
+      </div>
+      <div class="project-card">
+        <h3>Weather Dashboard</h3>
+        <p>Live weather data from OpenWeather API.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact" class="section">
+    <h2>Contact Me</h2>
+    <form id="contact-form">
+      <input type="text" name="name" placeholder="Your Name" required />
+      <input type="email" name="email" placeholder="Your Email" required />
+      <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
+      <button type="submit" class="btn">Send Message</button>
+    </form>
+  </section>
+  <script src="script.js"></script>
 </body>
 
 </html>
