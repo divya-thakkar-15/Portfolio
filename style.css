@@ -315,8 +315,8 @@ body {
 }
 
 .light-mode { 
-  background-color:#f4f4f4; 
-  color:#081b1f; 
+    background-color: #f4f4f4;
+  color: #081b1f;
 }
 .light-mode .icon-btn i { 
   color:#081b1f; 
@@ -335,7 +335,6 @@ body {
 .light-mode .side-menu ul li i,.light-mode .side-menu ul li a { 
   color:#081b1f; 
 }
-
 @media(max-width:900px){
 .home{
   flex-direction:column;
@@ -411,4 +410,59 @@ body {
     width: 50px;
     height: 50px;
   }
+}
+.project-icon {
+  font-size: 2.5rem;
+  color: var(--accent-color);
+  margin-bottom: 15px;
+  transition: transform 0.3s ease;
+  margin-left: 110px;
+}
+
+.project-icon:hover {
+  transform: scale(1.2);
+  color: var(--highlight-color);
+}
+
+.bounce {
+  animation: bounce 1.8s infinite;
+}
+
+.centered-projects {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+  margin-top: 10%;
+}
+
+.project-card {
+  max-width: 400px;
+  margin: 10px;
+  text-align: left;
+  padding: 10px;
+  height: 300px;
+}
+ .project-card h3{
+  margin-top: 15px;
+  margin-bottom: 15px;
+ }
+
+@keyframes bounce {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-8px);
+  }
+}
+
+.site-footer{
+  padding:1.2rem 0;
+  color:var(--muted);
+  text-align:center;
+  border-top:1px solid rgba(255,255,255,0.02)
+}
+.light-mode .project-card h3,p {
+  color: #e8eaeb !important;
 }
