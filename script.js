@@ -1,25 +1,39 @@
+
 const menuBtn = document.getElementById("menu-btn");
 const sideMenu = document.getElementById("side-menu");
-const themeToggle = document.getElementById("theme-toggle");
+const overlay = document.querySelector(".side-menu-overlay");
+const menuLinks = document.querySelectorAll(".menu-link");
+const sections = document.querySelectorAll(".section");
 
+menuBtn.addEventListener("click", ()=>{
+  sideMenu.classList.toggle("active");
+  overlay.classList.toggle("active");
+});
+overlay.addEventListener("click", ()=>{
+  sideMenu.classList.remove("active");
+  overlay.classList.remove("active");
+});
 
-menuBtn.addEventListener("click", () => {
-  const isOpen = sideMenu.style.right === "0px";
-
-  sideMenu.style.right = isOpen ? "-260px" : "0px";
-
-  
-  themeToggle.style.display = isOpen ? "block" : "none";
+menuLinks.forEach(link=>{
+  link.addEventListener("click",(e)=>{
+    e.preventDefault();
+    const targetID = link.getAttribute("href").substring(1);
+    sections.forEach(sec=>sec.classList.remove("active"));
+    const target = document.getElementById(targetID);
+    if(target) target.classList.add("active");
+    sideMenu.classList.remove("active");
+    overlay.classList.remove("active");
+  });
 });
 
 
-themeToggle.addEventListener("click", () => {
+document.getElementById("theme-toggle").addEventListener("click",()=>{
   document.body.classList.toggle("light-mode");
+});
 
-  const icon = themeToggle.querySelector("i");
-  if (document.body.classList.contains("light-mode")) {
-    icon.classList.replace("fa-moon", "fa-sun");
-  } else {
-    icon.classList.replace("fa-sun", "fa-moon");
-  }
+document.getElementById("contact-form").addEventListener("submit", function(e){
+  e.preventDefault();
+  emailjs.sendForm('YOUR_SERVICE_ID','YOUR_TEMPLATE_ID',this)
+  .then(()=>{ alert("Message sent successfully!"); this.reset(); })
+  .catch(err=>{ alert("Failed to send message."); console.error(err); });
 });
