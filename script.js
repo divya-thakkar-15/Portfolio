@@ -1,9 +1,9 @@
 
-const menuBtn = document.getElementById("menu-btn");
-const sideMenu = document.getElementById("side-menu");
-const overlay = document.querySelector(".side-menu-overlay");
-const menuLinks = document.querySelectorAll(".menu-link");
-const sections = document.querySelectorAll(".section");
+let menuBtn = document.getElementById("menu-btn");
+let sideMenu = document.getElementById("side-menu");
+let overlay = document.querySelector(".side-menu-overlay");
+let menuLinks = document.querySelectorAll(".menu-link");
+let sections = document.querySelectorAll(".section");
 
 menuBtn.addEventListener("click", ()=>{
   sideMenu.classList.toggle("active");
@@ -17,9 +17,9 @@ overlay.addEventListener("click", ()=>{
 menuLinks.forEach(link=>{
   link.addEventListener("click",(e)=>{
     e.preventDefault();
-    const targetID = link.getAttribute("href").substring(1);
+    let targetID = link.getAttribute("href").substring(1);
     sections.forEach(sec=>sec.classList.remove("active"));
-    const target = document.getElementById(targetID);
+    let target = document.getElementById(targetID);
     if(target) target.classList.add("active");
     sideMenu.classList.remove("active");
     overlay.classList.remove("active");
@@ -37,3 +37,9 @@ document.getElementById("contact-form").addEventListener("submit", function(e){
   .then(()=>{ alert("Message sent successfully!"); this.reset(); })
   .catch(err=>{ alert("Failed to send message."); console.error(err); });
 });
+
+
+
+
+
+
